@@ -19,9 +19,25 @@
       align-items: center;
       justify-content: center;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: containerFade 0.8s ease-out forwards;
+    }
+
+    @keyframes containerFade {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .card {
+      opacity: 0;
+      transform: translateY(50px);
       background: #ffffff;
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -29,11 +45,22 @@
       max-width: 450px;
       width: 100%;
       text-align: center;
-      transition: transform 0.3s ease;
+      /* Add transition for the new hover effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: cardReveal 1s ease-out 0.8s forwards;
     }
 
+    @keyframes cardReveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Simple hover effect to lift the card */
     .card:hover {
       transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     }
 
     .profile-img {
@@ -71,11 +98,12 @@
       line-height: 1.6;
     }
 
+    /* --- BUTTONS SECTION --- */
     .buttons {
       margin-top: 22px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
     }
 
@@ -84,80 +112,132 @@
       padding: 12px 28px;
       font-size: 15px;
       font-weight: 600;
-      color: #2a4365;
-      border: 2px solid #2a4365;
+      width: 80%;
+      text-align: center;
       border-radius: 30px;
-      background: transparent;
       cursor: pointer;
       transition: all 0.3s ease;
       text-decoration: none;
+      background: #2a4365;
+      color: #ffffff;
+      border: 2px solid #2a4365;
       position: relative;
       overflow: hidden;
-      width: 80%;
-      text-align: center;
     }
 
     .button::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: -100%;
       width: 100%;
       height: 100%;
-      background: #2a4365;
-      transition: all 0.4s ease;
-      z-index: -1;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation-name: continuousShimmer;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
     }
 
-    .button:hover::before {
-      left: 0;
+    .buttons .button:nth-of-type(1)::before { animation-delay: 0s; }
+    .buttons .button:nth-of-type(2)::before { animation-delay: 1s; }
+    .buttons .button:nth-of-type(3)::before { animation-delay: 2s; }
+
+    @keyframes continuousShimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
     }
 
     .button:hover {
-      color: #ffffff;
+      background: #4f81c7;
+      border-color: #4f81c7;
+      transform: translateY(-2px);
     }
 
-    .button:active {
-      transform: scale(0.95);
+    .button:active { transform: scale(0.95); }
+    
+    /* --- ROCKET ANIMATION CODE --- */
+    .rocket-emoji {
+      display: inline-block;
+      position: relative;
+      animation-name: launchRocket;
+      animation-duration: 4s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    .rocket-emoji::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: transparent;
+      z-index: -1; /* Placed behind the rocket */
+      animation-name: fireTrail;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-delay: 2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes launchRocket {
+      0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+      20%  { transform: translate(-60px, -160px) rotate(-45deg) scale(1.8); }
+      50%  { transform: translate(80px, -180px) rotate(45deg) scale(1.8); }
+      80%  { transform: translate(10px, 40px) rotate(20deg) scale(1.2); }
+      100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    }
+
+    @keyframes fireTrail {
+      0% { box-shadow: none; opacity: 0; }
+      10% { opacity: 1; }
+      25% { box-shadow: 0 15px 10px -5px #ff5722, 2px 25px 12px -8px #ffab40, -2px 35px 15px -10px rgba(224, 224, 224, 0.5); }
+      50% { box-shadow: 0 18px 12px -6px #ff5722, -3px 28px 14px -9px #ffab40, 3px 38px 18px -11px rgba(224, 224, 224, 0.6); }
+      75% { box-shadow: 0 16px 11px -5px #ff5722, 3px 26px 13px -8px #ffab40, -3px 36px 16px -10px rgba(224, 224, 224, 0.5); }
+      90% { opacity: 0.5; }
+      100% { box-shadow: none; opacity: 0; }
     }
 
     @media (max-width: 500px) {
-      .card {
-        padding: 22px;
-      }
-      h1 {
-        font-size: 22px;
-      }
-      p {
-        font-size: 15px;
-      }
-      .button {
-        padding: 10px 22px;
-        font-size: 14px;
-      }
+      .card { padding: 22px; }
+      h1 { font-size: 22px; }
+      p { font-size: 15px; }
+      .button { padding: 10px 22px; font-size: 14px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="profile-img">
-      <img src="images/subham.jpg" alt="Subham Kumar Prusty" />
-    </div>
-    <h1>Subham Kumar Prusty</h1>
-    <p>🏡 From: Jajpur</p>
-    <p>🎮 Apps & Games Developer</p>
 
-    <div class="description">
-      Passionate about creating engaging apps and immersive games!  
-      I love turning ideas into reality with smooth UX and powerful performance.  
-      Always learning, always building. 🚀🎮✨
-    </div>
+  <div class="container">
+    <div class="card">
+      <div class="profile-img">
+        <img src="images/subham.jpg" alt="Subham Kumar Prusty" />
+      </div>
+      <h1>Subham Kumar Prusty</h1>
+      <p>🏡 From: Jajpur</p>
+      <p>🎮 Apps & Games Developer</p>
 
-    <div class="buttons">
-      <a href="mailto:subhamkumarprusty582@gmail.com" class="button">📧 Email Me</a>
-      <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
-      <a href="https://subham-ctrl.github.io/TTT-Ultra/" target="_blank" class="button">🎮 My Game</a>
+      <div class="description">
+        Passionate about building simple yet addictive games with clean logic and smooth UX.
+Turning classic ideas into fun digital experiences-one game at a time! <span class="rocket-emoji">🚀</span>🎮✨
+      </div>
+
+      <div class="buttons">
+       <a href="mailto:subhamkumarprusty582@gmail.com?
+       subject=Contact%20from%20your%20Profile%20Card&body=Hi%20Subham," class="button">📧 Email Me</a>
+        <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
+        <a href="https://subham-ctrl.github.io/TTT-Ultra/" target="_blank" class="button">🎮 My Game</a>
+      </div>
     </div>
   </div>
+
+  <!-- The JavaScript for the 3D tilt effect has been removed. -->
+
 </body>
 </html>
