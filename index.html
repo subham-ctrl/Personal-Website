@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subham Kumar Prusty - Apps & Games Developer</title>
   <style>
     * {
@@ -23,127 +23,36 @@
     .card {
       background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 30px;
-      max-width: 450px;
-      width: 100%;
       text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
+      max-width: 400px;
     }
     .profile-img {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 20px;
-      border: 5px solid #80deea;
-    }
-    .profile-img img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #00796b;
     }
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       color: #00796b;
       margin-bottom: 10px;
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
       color: #555;
-      margin-bottom: 5px;
-    }
-    .description {
-      font-size: 16px;
-      color: #444;
-      margin-top: 15px;
-      line-height: 1.6;
-    }
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 30px;
-      font-size: 16px;
-      font-weight: 600;
-      color: #00796b;
-      border: 2px solid #00796b;
-      border-radius: 30px;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-      width: 80%;
-      text-align: center;
-    }
-    .button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: #00796b;
-      transition: all 0.4s ease;
-      z-index: -1;
-    }
-    .button:hover::before {
-      left: 0;
-    }
-    .button:hover {
-      color: #ffffff;
-    }
-    .button:active {
-      transform: scale(0.95);
-    }
-    @media (max-width: 500px) {
-      .card {
-        padding: 20px;
-      }
-      h1 {
-        font-size: 22px;
-      }
-      p {
-        font-size: 16px;
-      }
-      .button {
-        padding: 10px 25px;
-        font-size: 14px;
-      }
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <div class="profile-img">
-      <img src="ChatGPT Image Apr 19, 2025, 07_46_06 PM.png" alt="Subham Kumar Prusty">
-    </div>
+    <img src="images/subham.png" alt="Subham" class="profile-img">
     <h1>Subham Kumar Prusty</h1>
-    <p>🏡 From: Jajpur</p>
-    <p>🎮 Apps & Games Developer</p>
-
-    <div class="description">
-      Passionate about creating engaging apps and immersive games!  
-      I love turning ideas into reality with smooth user experiences and powerful performance.  
-      Always learning, always building. 🚀🎮✨
-    </div>
-
-    <div class="buttons">
-      <a href="mailto:subhamkumarprusty@gmail.com" class="button">📧 Email Me</a>
-      <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
-      <a href="https://subham-ctrl.github.io/TTT-Ultra/" target="_blank" class="button">🎮 My Game</a>
-    </div>
+    <p>Apps & Games Developer 🚀</p>
   </div>
 
 </body>
