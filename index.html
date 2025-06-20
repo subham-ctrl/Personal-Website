@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subham Kumar Prusty - Apps & Games Developer</title>
   <style>
-    @keyframes softPulse {
-      0% { box-shadow: 0 0 0px rgba(255, 87, 34, 0.4); }
-      50% { box-shadow: 0 0 12px rgba(255, 87, 34, 0.5); }
-      100% { box-shadow: 0 0 0px rgba(255, 87, 34, 0.4); }
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +14,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #eaf2f8, #d6e4f0);
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -30,7 +24,7 @@
     .card {
       background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       padding: 30px;
       max-width: 450px;
       width: 100%;
@@ -39,7 +33,7 @@
     }
 
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     .profile-img {
@@ -48,7 +42,7 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
-      border: 4px solid #6c9ed9;
+      border: 4px solid #4f81c7;
     }
 
     .profile-img img {
@@ -61,12 +55,12 @@
       font-size: 26px;
       color: #2a4365;
       margin-bottom: 8px;
-      text-shadow: 0 0 6px rgba(108, 158, 217, 0.2);
+      text-shadow: 0 0 8px rgba(79, 129, 199, 0.3);
     }
 
     p {
       font-size: 17px;
-      color: #555;
+      color: #444;
       margin-bottom: 4px;
     }
 
@@ -90,18 +84,37 @@
       padding: 12px 28px;
       font-size: 15px;
       font-weight: 600;
-      color: #fff;
-      background: #ff5722;
-      border: none;
+      color: #2a4365;
+      border: 2px solid #2a4365;
       border-radius: 30px;
+      background: transparent;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: all 0.3s ease;
       text-decoration: none;
+      position: relative;
+      overflow: hidden;
       width: 80%;
       text-align: center;
+    }
 
-      /* Soft subtle orange pulse animation */
-      animation: softPulse 2s infinite;
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: #2a4365;
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    .button:hover::before {
+      left: 0;
+    }
+
+    .button:hover {
+      color: #ffffff;
     }
 
     .button:active {
@@ -136,12 +149,12 @@
 
     <div class="description">
       Passionate about creating engaging apps and immersive games!  
-      I love turning ideas into reality with smooth user experiences and powerful performance.  
+      I love turning ideas into reality with smooth UX and powerful performance.  
       Always learning, always building. 🚀🎮✨
     </div>
 
     <div class="buttons">
-      <a href="mailto:subhamkumarprusty@gmail.com" class="button">📧 Email Me</a>
+      <a href="mailto:subhamkumarprusty582@gmail.com" class="button">📧 Email Me</a>
       <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
       <a href="https://subham-ctrl.github.io/TTT-Ultra/" target="_blank" class="button">🎮 My Game</a>
     </div>
