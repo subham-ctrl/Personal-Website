@@ -3,117 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subham Kumar Prusty - Apps & Games Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <title>Subham Kumar Prusty - Developer Portfolio</title>
+
+  <!-- Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
+
     body {
+      background: #f4f6f8;
       min-height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       padding: 20px;
     }
+
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
-      max-width: 450px;
+      max-width: 440px;
       width: 100%;
       text-align: center;
-      backdrop-filter: blur(10px);
-      color: #fff;
+      transition: transform 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
-      border: 4px solid #00f0ff;
+      border: 4px solid #00796b33;
     }
+
     .profile-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     h1 {
-      font-size: 26px;
+      font-size: 24px;
+      color: #2c3e50;
       margin-bottom: 8px;
-      color: #00f0ff;
     }
+
     p {
       font-size: 16px;
-      margin-bottom: 6px;
+      color: #555;
+      margin-bottom: 4px;
     }
+
     .description {
+      font-size: 15px;
+      color: #444;
       margin-top: 15px;
-      font-size: 14px;
       line-height: 1.6;
-      color: #ddd;
     }
+
     .buttons {
       margin-top: 20px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
+
     .button {
-      padding: 12px 30px;
+      display: inline-block;
+      padding: 12px 28px;
       font-size: 15px;
-      color: #00f0ff;
-      border: 2px solid #00f0ff;
-      border-radius: 30px;
+      font-weight: 500;
+      color: #00796b;
+      border: 2px solid #00796b;
+      border-radius: 25px;
       background: transparent;
       cursor: pointer;
-      text-decoration: none;
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      text-decoration: none;
     }
+
     .button:hover {
-      background: #00f0ff;
-      color: #0f2027;
-      box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+      background: #00796b;
+      color: #fff;
     }
+
     @media (max-width: 500px) {
       .card {
         padding: 20px;
       }
       h1 {
-        font-size: 22px;
-      }
-      p {
-        font-size: 14px;
-      }
-      .button {
-        padding: 10px 25px;
-        font-size: 13px;
+        font-size: 20px;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <div class="profile-img">
       <img src="images/subham.png" alt="Subham Kumar Prusty" />
     </div>
+
     <h1>Subham Kumar Prusty</h1>
     <p>🏡 From: Jajpur</p>
-    <p>🎮 Apps & Games Developer</p>
+    <p>💻 Apps & Games Developer</p>
+
     <div class="description">
-      Turning wild ideas into awesome apps and epic games.  
-      Obsessed with smooth performance, engaging UX, and creative logic.  
-      Let’s build the future, one game at a time! 🚀🎯🔥
+      Building smooth apps and fun games with powerful performance.  
+      I convert ideas into reality with clean UX & code.  
+      Always learning, always shipping. 🚀
     </div>
+
     <div class="buttons">
       <a href="mailto:subhamkumarprusty@gmail.com" class="button">📧 Email Me</a>
       <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
