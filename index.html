@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subham Kumar Prusty - Apps & Games Developer</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
   <style>
     * {
       margin: 0;
@@ -17,7 +14,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #c2f0ff, #00796b);
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,30 +22,27 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.95);
+      background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       padding: 30px;
-      max-width: 460px;
+      max-width: 450px;
       width: 100%;
       text-align: center;
-      border: 1px solid rgba(0, 121, 107, 0.1);
-      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      transition: 0.4s ease;
+      transform: translateY(-8px);
     }
 
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
-      border: 4px solid #00bfa5;
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+      border: 4px solid #4f81c7;
     }
 
     .profile-img img {
@@ -59,20 +53,20 @@
 
     h1 {
       font-size: 26px;
-      color: #004d40;
-      text-shadow: 0 0 8px rgba(0, 255, 204, 0.25);
+      color: #2a4365;
       margin-bottom: 8px;
+      text-shadow: 0 0 8px rgba(79, 129, 199, 0.3);
     }
 
     p {
-      font-size: 16px;
-      color: #555;
+      font-size: 17px;
+      color: #444;
       margin-bottom: 4px;
     }
 
     .description {
       font-size: 15px;
-      color: #444;
+      color: #333;
       margin-top: 15px;
       line-height: 1.6;
     }
@@ -81,7 +75,7 @@
       margin-top: 22px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       align-items: center;
     }
 
@@ -90,8 +84,8 @@
       padding: 12px 28px;
       font-size: 15px;
       font-weight: 600;
-      color: #00796b;
-      border: 2px solid #00796b;
+      color: #2a4365;
+      border: 2px solid #2a4365;
       border-radius: 30px;
       background: transparent;
       cursor: pointer;
@@ -99,7 +93,7 @@
       text-decoration: none;
       position: relative;
       overflow: hidden;
-      width: 85%;
+      width: 80%;
       text-align: center;
     }
 
@@ -110,7 +104,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: #00796b;
+      background: #2a4365;
       transition: all 0.4s ease;
       z-index: -1;
     }
@@ -121,41 +115,34 @@
 
     .button:hover {
       color: #ffffff;
-      box-shadow: 0 5px 15px rgba(0, 121, 107, 0.3);
     }
 
     .button:active {
-      transform: scale(0.97);
+      transform: scale(0.95);
     }
 
     @media (max-width: 500px) {
       .card {
-        padding: 20px;
-      }
-      .profile-img {
-        width: 110px;
-        height: 110px;
+        padding: 22px;
       }
       h1 {
         font-size: 22px;
       }
-      p, .description {
-        font-size: 14px;
+      p {
+        font-size: 15px;
       }
       .button {
-        padding: 10px 24px;
+        padding: 10px 22px;
         font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="card">
     <div class="profile-img">
       <img src="images/subham.png" alt="Subham Kumar Prusty" />
     </div>
-
     <h1>Subham Kumar Prusty</h1>
     <p>🏡 From: Jajpur</p>
     <p>🎮 Apps & Games Developer</p>
@@ -167,11 +154,10 @@
     </div>
 
     <div class="buttons">
-      <a href="mailto:subhamkumarprusty@gmail.com" class="button">📧 Email Me</a>
+      <a href="mailto:subhamkumarprusty582@gmail.com" class="button">📧 Email Me</a>
       <a href="https://www.instagram.com/mr.nobita_1x/" target="_blank" class="button">📸 Instagram</a>
       <a href="https://subham-ctrl.github.io/TTT-Ultra/" target="_blank" class="button">🎮 My Game</a>
     </div>
   </div>
-
 </body>
 </html>
