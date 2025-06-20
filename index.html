@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Subham Kumar Prusty - Apps & Games Developer</title>
   <style>
-    @keyframes fireGlow {
-      0% { box-shadow: 0 0 5px #ff5722, 0 0 10px #ff7043; }
-      50% { box-shadow: 0 0 15px #ff5722, 0 0 25px #ff7043; }
-      100% { box-shadow: 0 0 5px #ff5722, 0 0 10px #ff7043; }
+    @keyframes softPulse {
+      0% { box-shadow: 0 0 0px rgba(255, 87, 34, 0.4); }
+      50% { box-shadow: 0 0 12px rgba(255, 87, 34, 0.5); }
+      100% { box-shadow: 0 0 0px rgba(255, 87, 34, 0.4); }
     }
 
     * {
@@ -20,7 +20,7 @@
 
     body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+      background: linear-gradient(135deg, #eaf2f8, #d6e4f0);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -30,7 +30,7 @@
     .card {
       background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
       max-width: 450px;
       width: 100%;
@@ -39,7 +39,7 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
 
     .profile-img {
@@ -48,7 +48,7 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto 20px;
-      border: 4px solid #4f81c7;
+      border: 4px solid #6c9ed9;
     }
 
     .profile-img img {
@@ -61,12 +61,12 @@
       font-size: 26px;
       color: #2a4365;
       margin-bottom: 8px;
-      text-shadow: 0 0 8px rgba(79, 129, 199, 0.3);
+      text-shadow: 0 0 6px rgba(108, 158, 217, 0.2);
     }
 
     p {
       font-size: 17px;
-      color: #444;
+      color: #555;
       margin-bottom: 4px;
     }
 
@@ -91,19 +91,17 @@
       font-size: 15px;
       font-weight: 600;
       color: #fff;
-      border: 2px solid #ff7043;
-      border-radius: 30px;
       background: #ff5722;
+      border: none;
+      border-radius: 30px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease;
       text-decoration: none;
-      position: relative;
-      overflow: hidden;
       width: 80%;
       text-align: center;
 
-      /* Fire Animation Always Active */
-      animation: fireGlow 1.2s infinite alternate;
+      /* Soft subtle orange pulse animation */
+      animation: softPulse 2s infinite;
     }
 
     .button:active {
